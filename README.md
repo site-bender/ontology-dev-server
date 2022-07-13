@@ -13,6 +13,7 @@
 ## How to start
 
 - `make` to start the server and load [main.ttl](./src/main.ttl).
+- Visit [Apache Jena Fuseki web UI](http://localhost:3040/)
 
 ## How to reload manually
 
