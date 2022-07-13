@@ -1,0 +1,9 @@
+services:
+  fuseki:
+    image: ghcr.io/sitebender/fuseki:0.0.4
+    container_name: fuseki
+    build: ./fuseki/
+    ports:
+      - ${PORT}:3030
+    volumes:
+      - ..:/app
