@@ -30,9 +30,9 @@ SELECT ?news WHERE { :_auckland :mentionedIn ?news}
 
 **Jetbrains' IDE**
 
-- Go to Settings > Tools > File Watchers
-- Import this [watchers config](ideConfig/jetbrains/watchers.xml)
-- Setup _scope_ and _working directory_
+1. Go to Settings > Tools > File Watchers
+2. Import this [watchers config](ideConfig/jetbrains/watchers.xml)
+3. Setup _scope_ and _working directory_
 
 **VS code**
 
