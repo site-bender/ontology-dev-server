@@ -6,7 +6,7 @@ ENV	PATH="${DENO_INSTALL}/bin:${JAVA_HOME}/bin/:${PATH}"
 ENV FUSEKI_VERSION="4.5.0"
 ENV FUSEKI_INSTALL="/opt/fuseki"
 ENV FUSEKI_BASE="/var/fuseki"
-ENV PROJECT_ROOT="/app"
+ENV APP="/app"
 
 ENV FUSEKI_BIN_URL="https://dlcdn.apache.org/jena/binaries/apache-jena-fuseki-${FUSEKI_VERSION}.tar.gz"
 ENV DENO_INSTALLER_URL="https://deno.land/install.sh"
@@ -32,4 +32,4 @@ RUN curl -fsSL ${FUSEKI_BIN_URL} \
 RUN curl -fsSL ${DENO_INSTALLER_URL} | sh
 
 EXPOSE 3030
-CMD sh -c "${FUSEKI_INSTALL}/fuseki-server --config=${PROJECT_ROOT}/.devcontainer/fuseki/configTdb2Mem.ttl > ${PROJECT_ROOT}/log 2>&1"
+CMD sh -c "${FUSEKI_INSTALL}/fuseki-server --update --config=${APP}/.devcontainer/fuseki/configTdb2Mem.ttl > ${APP}/log 2>&1"

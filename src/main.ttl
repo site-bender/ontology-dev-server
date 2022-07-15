@@ -4,9 +4,9 @@
 @prefix xml:  <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology> .
+@base <http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology> .
 
-<http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology>
+<http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology>
     rdf:type     owl:Ontology ;
     rdfs:comment "A news ontology" .
 
@@ -14,7 +14,7 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#include
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#include
 :include
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf owl:topObjectProperty ;
@@ -22,14 +22,14 @@
     rdf:type           owl:TransitiveProperty .
 
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#happenedIn
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#happenedIn
 :happenedIn
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf owl:topObjectProperty ;
     owl:inverseOf      :mentionedIn .
 
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#mentionedIn
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#mentionedIn
 :mentionedIn
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf owl:topObjectProperty ;
@@ -37,7 +37,7 @@
     rdfs:range         :News .
 
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#partOf
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#partOf
 :partOf
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf owl:topObjectProperty ;
@@ -50,26 +50,26 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#City
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#City
 :City
     rdf:type         owl:Class ;
     rdfs:subClassOf  :Place ;
     owl:disjointWith :Country .
 
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#Country
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#Country
 :Country
     rdf:type        owl:Class ;
     rdfs:subClassOf :Place .
 
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#News
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#News
 :News
     rdf:type         owl:Class ;
     owl:disjointWith :Place .
 
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#Place
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#Place
 :Place
     rdf:type owl:Class .
 
@@ -78,28 +78,24 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#_auckland
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#_auckland
 :_auckland
     rdf:type  owl:NamedIndividual, :City ;
     :partOf :_newZealand .
 
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#_newZealand
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#_newZealand
 :_newZealand
     rdf:type owl:NamedIndividual, :Country .
 
 
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#_news1
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#_news1
 :_news1
     rdf:type      owl:NamedIndividual, :News ;
     :happenedIn :_auckland .
 
 
-:_news2
-    rdf:type      owl:NamedIndividual, :News ;
-    :happenedIn :_auckland .
-
-###  http://www.semanticweb.org/wangbo/ontologies/2022/5/news-ontology#_usa
+###  http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#_usa
 :_usa
     rdf:type owl:NamedIndividual, :Country .
 

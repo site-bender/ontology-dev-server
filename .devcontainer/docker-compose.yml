@@ -1,6 +1,6 @@
 services:
   fuseki:
-    image: ghcr.io/sitebender/fuseki:0.0.4
+    image: ghcr.io/site-bender/fuseki:1.0.0
     container_name: fuseki
     build: ./fuseki/
     ports:
