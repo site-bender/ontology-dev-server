@@ -1,8 +1,8 @@
 services:
   ontology-dev-server:
-    container_name: ontology-dev-server
+    container_name: ${CONTAINER_NAME}
     build: .
     ports:
-      - ${PORT}:3030
+      - ${HOST_PORT}:3030
     volumes:
       - ..:/app
