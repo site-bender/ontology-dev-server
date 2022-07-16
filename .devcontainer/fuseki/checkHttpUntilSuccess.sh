@@ -3,7 +3,7 @@
 count=0
 countMax=10
 
-while ((count++ < countMax)) && ! curl -fsL http://localhost:3030/ds; do
+while ((count++ < countMax)) && ! curl -fsL http://localhost:3030 > /dev/null; do
   echo "Wait for the Fuseki server to start completely..."
   sleep 1
 done
