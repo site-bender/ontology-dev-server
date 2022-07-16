@@ -2,7 +2,7 @@
 
 - :curly_loop: **[Fuseki with UI](https://jena.apache.org/documentation/fuseki2/fuseki-webapp.html)** - The SPARQL server with inferencing. 
 - :turtle: **[SOH tools](https://jena.apache.org/documentation/fuseki2/soh.html)** - Auto reload Turtle file changes on save.
-- :bulb: **[OWLFBRuleReasoner enabled](https://jena.apache.org/documentation/inference/)** - OWL/lite reasoner by default, Auto-update on save.
+- :bulb: **[OWLFBRuleReasoner enabled](https://jena.apache.org/documentation/inference/)** - OWL/lite reasoner by default. Auto-update on save.
 - :dart: **[Deno JS engine](https://deno.land/manual/testing)** - E2E tests with examples.
 - :whale: **[Docker container](https://hub.docker.com/_/archlinux/)** - Across platforms.
 
@@ -44,7 +44,7 @@ SELECT ?news WHERE { :_auckland :mentionedIn ?news}
 
 ### Edit Deno tests
 
-For editing Deno tests in [e2e](./e2e), you can install a Deno plugin. 
+For editing Deno tests in [the e2e folder](./e2e), you can install a Deno plugin. 
 
 **Jetbrains' IDE**
 
