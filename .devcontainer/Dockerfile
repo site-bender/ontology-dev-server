@@ -31,4 +31,4 @@ RUN curl -fsSL ${FUSEKI_BIN_URL} \
 RUN curl -fsSL ${DENO_INSTALLER_URL} | sh
 
 EXPOSE 3030
-CMD sh -c "${FUSEKI_INSTALL}/fuseki-server --update --config=${APP}/.devcontainer/fuseki/configTdb2Mem.ttl > ${APP}/log 2>&1"
+CMD sh -c "${FUSEKI_INSTALL}/fuseki-server --update --config=${APP}/.devcontainer/configTdb2Mem.ttl > ${APP}/log 2>&1"
