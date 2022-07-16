@@ -2,7 +2,7 @@ PORT_HOST := 3040
 
 DC := PORT=${PORT_HOST} docker compose -f .devcontainer/docker-compose.yml
 
-CHECK := sh /app/.devcontainer/checkHttpUntilSuccess.sh
+CHECK := sh /app/.devcontainer/checkEndpointUntilSuccess.sh
 SPUT := /opt/fuseki/bin/s-put http://localhost:3030/ds default /app/src/main.ttl
 TEST := deno test --allow-all /app/e2e
 
