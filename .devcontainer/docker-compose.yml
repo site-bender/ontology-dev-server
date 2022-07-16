@@ -1,6 +1,6 @@
 services:
   fuseki:
-    image: ghcr.io/site-bender/fuseki:1.0.0
+    image: ghcr.io/site-bender/ontology-dev-server:1.0.0
     container_name: fuseki
     build: ./fuseki/
     ports:

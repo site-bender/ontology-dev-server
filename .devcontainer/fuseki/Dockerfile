@@ -12,11 +12,10 @@ ENV FUSEKI_BIN_URL="https://dlcdn.apache.org/jena/binaries/apache-jena-fuseki-${
 ENV DENO_INSTALLER_URL="https://deno.land/install.sh"
 
 LABEL org.opencontainers.image.authors="https://github.com/natebowang"
-LABEL org.opencontainers.image.description="Apache Jena Fuseki Container"
-LABEL org.opencontainers.image.source=""
-LABEL org.opencontainers.image.title="Apache Jena Fuseki"
-LABEL org.opencontainers.image.url=""
-LABEL org.opencontainers.image.version="${FUSEKI_VERSION}"
+LABEL org.opencontainers.image.title="Ontology Dev Server"
+LABEL org.opencontainers.image.description="Ontology development tool chain"
+LABEL org.opencontainers.image.url="https://github.com/site-bender/ontology-dev-server"
+LABEL org.opencontainers.image.source="https://github.com/site-bender/ontology-dev-server"
 
 RUN mkdir ${FUSEKI_INSTALL}
 
