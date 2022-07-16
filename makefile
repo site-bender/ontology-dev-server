@@ -23,7 +23,7 @@ restartDocker:
 
 load:
 	@$(DC) exec fuseki sh -c "$(CHECK) && $(SPUT)"
-	@echo "Ontology is loaded"
+	@date +"Ontology is loaded at %FT%T%z"
 
 test:
 	@$(DC) exec fuseki sh -c "${TEST}"
