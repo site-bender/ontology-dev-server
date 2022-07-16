@@ -30,4 +30,4 @@ load:
 	@printf "$(GREEN_NORMAL)%s$(NO_COLOR)\n" "Ontology is loaded at $(shell date)"
 
 test:
-	@$(DC) exec fuseki sh -c "${TEST}"
+	@$(DC) exec fuseki sh -c "$(TEST)"
