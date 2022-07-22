@@ -13,7 +13,7 @@
 ## How to start
 
 1. `make` to start the server and load [main.ttl](./src/main.ttl). The default port is _3040_. If you want to use _3050_ instead, run `make HOST_PORT=3050`. 
-2. Visit [Fuseki web UI](http://localhost:3040/#/dataset/ds/query).
+2. Visit http://localhost:3040/#/dataset/ds/query.
 3. Query the following SPARQL, If you get *http://..._news1*, the dev server is running.
 ```SPARQL
 PREFIX : <http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#>
