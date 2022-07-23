@@ -12,7 +12,7 @@
 
 ## How to start
 
-1. `make` to start the server and load [main.ttl](./src/main.ttl). The default port is _3040_. If you want to use _3050_ instead, run `make HOST_PORT=3050`. 
+1. `make` to start the server and load [all ttl files](./src). The default port is _3040_. If you want to use _3050_ instead, run `make HOST_PORT=3050`. 
 2. Visit http://localhost:3040/#/dataset/ds/query.
 3. Query the following SPARQL, If you get *http://..._news1*, the dev server is running.
 ```SPARQL
@@ -22,12 +22,12 @@ PREFIX places: <https://raw.githubusercontent.com/site-bender/ontology-dev-serve
 
 SELECT ?news WHERE { places:_auckland main:mentionedIn ?news}
 ```
-4. Replace [main.ttl](./src/main.ttl) with your ontology. 
+4. Replace [ttl files](./src) with your ontology. 
 5. Have some fun.
 
 ## How to reload manually
 
-- `make load` to load [main.ttl](./src/main.ttl).
+- `make load` to load [all ttl files](./src).
 
 ## How to reload automatically 
 
@@ -36,7 +36,7 @@ SELECT ?news WHERE { places:_auckland main:mentionedIn ?news}
 1. Go to Settings > Tools > File Watchers
 2. Import this [watchers config](ideConfig/jetbrains/watchers.xml)
 3. Setup _scope_ equal to [./src](./src)
-4. Setup _working directory_ equal to [./](./)
+4. Setup _working directory_ equal to [./](.)
 
 **VS code**
 
