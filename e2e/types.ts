@@ -1,16 +1,16 @@
-export type Subject = {
-    subject: {
+export type News = {
+    news: {
         type: "uri",
         value: string,
     }
 }
 
-export type FusekiResponse = {
+export type NewsResponse = {
     head: {
         vars: string[]
     },
     results: {
-        bindings: Subject[]
+        bindings: News[]
     },
 }
 

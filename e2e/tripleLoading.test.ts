@@ -1,21 +1,35 @@
-import {assertEquals} from "https://deno.land/std@0.147.0/testing/asserts.ts";
-import {FusekiResponse} from "./types.ts";
+import {assertStringIncludes} from "https://deno.land/std@0.147.0/testing/asserts.ts";
+import {NewsResponse} from "./types.ts";
+import {headers, url, prefix} from "./constants.ts";
 
 Deno.test("Triple loading test", async () => {
-    const url = "http://localhost:3030/ds/sparql";
-    const headers = {
-        "accept": "application/sparql-results+json",
-        "content-type": "application/x-www-form-urlencoded",
-    };
-    const body = "query=PREFIX%20%3A%20%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fsite-bender%2Fontologies%2F2022%2F5%2Fnews-ontology%23%3E%0A%0ASELECT%20%3Fsubject%0AWHERE%20%7B%20%3Fsubject%20%3AhappenedIn%20%3A_auckland%20%7D";
+    const query = `${prefix}
+        SELECT ?news WHERE { ?news main:happenedIn places:_auckland}
+    `
+    const body = new URLSearchParams()
+    body.set('query', query)
 
-    const json: FusekiResponse = await (await fetch(url, {
+    const json: NewsResponse = await (await fetch(url, {
         headers,
         body,
         method: "POST",
     })).json();
 
-    const expectedValue = "http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#_news1"
+    assertStringIncludes(json.results.bindings[0].news.value, "_news1");
+});
 
-    assertEquals(json.results.bindings[0].subject.value, expectedValue);
+Deno.test("Triple inferring test", async () => {
+    const query = `${prefix}
+        SELECT ?news WHERE { places:_auckland main:mentionedIn ?news}
+    `
+    const body = new URLSearchParams()
+    body.set('query', query)
+
+    const json: NewsResponse = await (await fetch(url, {
+        headers,
+        body,
+        method: "POST",
+    })).json();
+
+    assertStringIncludes(json.results.bindings[0].news.value, "_news1");
 });
