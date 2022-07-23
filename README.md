@@ -16,8 +16,11 @@
 2. Visit http://localhost:3040/#/dataset/ds/query.
 3. Query the following SPARQL, If you get *http://..._news1*, the dev server is running.
 ```SPARQL
-PREFIX : <http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology#>
-SELECT ?news WHERE { :_auckland :mentionedIn ?news}
+PREFIX main:   <https://raw.githubusercontent.com/site-bender/ontology-dev-server/main/src/main.ttl#> 
+PREFIX news:   <https://raw.githubusercontent.com/site-bender/ontology-dev-server/main/src/news.ttl#> 
+PREFIX places: <https://raw.githubusercontent.com/site-bender/ontology-dev-server/main/src/places.ttl#> 
+
+SELECT ?news WHERE { places:_auckland main:mentionedIn ?news}
 ```
 4. Replace [main.ttl](./src/main.ttl) with your ontology. 
 5. Have some fun.
