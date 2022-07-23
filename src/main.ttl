@@ -5,9 +5,8 @@
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology> .
 
-<http://www.semanticweb.org/site-bender/ontologies/2022/5/news-ontology>
+<https://raw.githubusercontent.com/site-bender/ontology-dev-server/main/src/main.ttl>
     rdf:type     owl:Ontology ;
     rdfs:comment "A news ontology" .
 
